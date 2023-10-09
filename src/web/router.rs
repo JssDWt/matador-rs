@@ -59,19 +59,19 @@ fn get_params_per_api_keys_set() -> Vec<ApiParams> {
     let api_configs = apis_config();
     let api_params = [
         &api_configs.openai,
-        &api_configs.clipdrop,
-        &api_configs.palm,
-        &api_configs.replicate,
-        &api_configs.anthropic,
-        &api_configs.stability,
-        &api_configs.goose,
-        &api_configs.cohere,
-        &api_configs.ai21,
-        &api_configs.together,
-        &api_configs.scenario,
-        &api_configs.perplexity,
-        &api_configs.anyscale,
-        &api_configs.replit.clone().map(|replit| replit.params),
+        // &api_configs.clipdrop,
+        // &api_configs.palm,
+        // &api_configs.replicate,
+        // &api_configs.anthropic,
+        // &api_configs.stability,
+        // &api_configs.goose,
+        // &api_configs.cohere,
+        // &api_configs.ai21,
+        // &api_configs.together,
+        // &api_configs.scenario,
+        // &api_configs.perplexity,
+        // &api_configs.anyscale,
+        // &api_configs.replit.clone().map(|replit| replit.params),
     ];
 
     api_params
