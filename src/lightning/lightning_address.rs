@@ -79,9 +79,12 @@ struct PayerDataDetails {
 #[derive(Debug, Deserialize)]
 #[allow(unused, non_snake_case)]
 struct PayerData {
-    name: PayerDataDetails,
-    email: PayerDataDetails,
-    pubkey: PayerDataDetails,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    name: Option<PayerDataDetails>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    email: Option<PayerDataDetails>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pubkey: Option<PayerDataDetails>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -90,7 +93,7 @@ struct WellKnownResponse {
     #[serde(skip_serializing_if = "Option::is_none")]
     status: Option<String>,
     tag: String,
-    commentAllowed: u8,
+    commentAllowed: u32,
     callback: String,
     metadata: String,
     minSendable: i64,
